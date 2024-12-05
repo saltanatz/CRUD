@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create / Update Country</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ view.action|default_if_none:"Create" }} Country</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="button">Save</button>
+        </form>
+        <a href="{% url 'country_list' %}" class="button">Back to Country List</a>
+    </div>
+</body>
+</html>

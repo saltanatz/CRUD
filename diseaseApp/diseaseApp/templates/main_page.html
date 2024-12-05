@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Database Management App</h1>
+    </header>
+    <main>
+        <p>Use the navigation links below to manage different aspects of the database:</p>
+        <nav>
+            <ul>
+                <li><a href="{% url 'country_list' %}">View Countries</a></li>
+                <li><a href="{% url 'country_create' %}">Add New Country</a></li>
+                <li><a href="{% url 'users_list' %}">View Users</a></li>
+                <li><a href="{% url 'users_create' %}">Add New User</a></li>
+                <li><a href="{% url 'patients_list' %}">View Patients</a></li>
+                <li><a href="{% url 'patients_create' %}">Add New Patient</a></li>
+                <li><a href="{% url 'diseasetype_list' %}">View Disease Types</a></li>
+                <li><a href="{% url 'diseasetype_create' %}">Add New Disease Type</a></li>
+                <li><a href="{% url 'disease_list' %}">View Diseases</a></li>
+                <li><a href="{% url 'disease_create' %}">Add New Disease</a></li>
+                <li><a href="{% url 'discover_list' %}">View Discover Records</a></li>
+                <li><a href="{% url 'discover_create' %}">Add New Discover Record</a></li>
+                <li><a href="{% url 'patientdisease_list' %}">View Patient Diseases</a></li>
+                <li><a href="{% url 'patientdisease_create' %}">Add New Patient Disease</a></li>
+                <li><a href="{% url 'publicservant_list' %}">View Public Servants</a></li>
+                <li><a href="{% url 'publicservant_create' %}">Add New Public Servant</a></li>
+                <li><a href="{% url 'doctor_list' %}">View Doctors</a></li>
+                <li><a href="{% url 'doctor_create' %}">Add New Doctor</a></li>
+                <li><a href="{% url 'specialize_list' %}">View Specializations</a></li>
+                <li><a href="{% url 'specialize_create' %}">Add New Specialization</a></li>
+                <li><a href="{% url 'record_list' %}">View Records</a></li>
+                <li><a href="{% url 'record_create' %}">Add New Record</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>

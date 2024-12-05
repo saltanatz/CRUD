@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Country</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Country</h1>
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="button button-danger">Confirm Delete</button>
+        </form>
+        <a href="{% url 'country_list' %}" class="button">Cancel</a>
+    </div>
+</body>
+</html>
